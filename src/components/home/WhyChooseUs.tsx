@@ -63,30 +63,6 @@ export const WhyChooseUs: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Two-image editorial strip below the cards */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          <div className="overflow-hidden rounded-[2px]">
-            <img
-              src="/images/clinic-interior.jpg"
-              alt="Bright consultation room with natural light and modern dental chair"
-              width={800}
-              height={533}
-              loading="lazy"
-              className="w-full h-auto object-cover aspect-[3/2]"
-            />
-          </div>
-          <div className="overflow-hidden rounded-[2px]">
-            <img
-              src="/images/clinic-instruments.jpg"
-              alt="Neatly arranged dental instruments on a sterile tray with warm lighting"
-              width={800}
-              height={600}
-              loading="lazy"
-              className="w-full h-auto object-cover aspect-[4/3] md:aspect-[3/2]"
-            />
-          </div>
-        </div>
       </Container>
     </section>
   );
