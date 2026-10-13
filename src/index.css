@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #F6F3EE;
+  --surface: #FFFFFF;
+  --surface-alt: #EFEBE4;
+  --placeholder: #E7E2D9;
+  --text: #1B1F1E;
+  --text-muted: #5C6360;
+  --accent: #0F4C4A;
+  --accent-hover: #0B3A38;
+  --border: #DDD8CF;
+
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@theme {
+  --color-bg: #F6F3EE;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #EFEBE4;
+  --color-placeholder: #E7E2D9;
+  --color-text: #1B1F1E;
+  --color-text-muted: #5C6360;
+  --color-accent: #0F4C4A;
+  --color-accent-hover: #0B3A38;
+  --color-border: #DDD8CF;
+
+  /* Backward compatibility for admin tokens if referenced */
+  --color-warm-bg: #F6F3EE;
+  --color-ink: #1B1F1E;
+  --color-green-muted: #0F4C4A;
+  --color-green-dark: #0B3A38;
+  --color-green-soft: #EFEBE4;
+  --color-subtle-grey: #5C6360;
+  --color-light-grey: #9CA3AF;
+  --color-divider: #DDD8CF;
+  --color-surface-soft: #EFEBE4;
+
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--text);
+    background-color: var(--bg);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  /* Headings with tight leading and Instrument Serif */
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+
+  /* Minimal scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C4BEB3;
+  }
+
+  /* Accessible focus states for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Subtle fade and translate on scroll utility (200-300ms) */
+.fade-up-enter {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 260ms cubic-bezier(0.16, 1, 0.3, 1), transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-up-enter {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
