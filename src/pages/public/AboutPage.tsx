@@ -12,7 +12,7 @@ export const AboutPage: React.FC = () => {
         <div className="max-w-2xl space-y-4 mb-16">
           <Eyebrow>About the Clinic</Eyebrow>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1B1F1E] tracking-tight leading-[1.05]">
-            Quiet, preventative dentistry in San Francisco.
+            Quiet, preventative dentistry.
           </h1>
           <p className="text-base sm:text-lg text-[#5C6360] leading-relaxed">
             Ever Brooks Dentals was planned as a calm practice focused on long-term oral health rather than rushed appointments.

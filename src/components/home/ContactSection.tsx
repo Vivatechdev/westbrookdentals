@@ -64,7 +64,7 @@ export const ContactSection: React.FC = () => {
                 <address className="not-italic text-sm text-[#6E7571] leading-relaxed">
                   Ever Brooks Dentals<br />
                   580 California St<br />
-                  San Francisco, CA 94104
+                  CA 94104
                 </address>
               </div>
 

@@ -31,7 +31,7 @@ export const OpeningHoursContact: React.FC = () => {
             </div>
 
             <p className="text-base text-[#5C6360] leading-relaxed">
-              We are located at 580 California Street in San Francisco.
+              We are located at 580 California Street. Walk-ins during surgery hours are welcome.
             </p>
 
             <div className="space-y-4 border-t border-[#DDD8CF] pt-6 text-sm text-[#5C6360]">

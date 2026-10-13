@@ -92,7 +92,7 @@ export const PrivacyPage: React.FC = () => {
               <a href="mailto:hello@everbrook.sbs" className="text-[#0F4C4A] font-medium hover:underline">
                 hello@everbrook.sbs
               </a>{' '}
-              or contact reception at 580 California St, San Francisco, CA 94104.
+              or contact reception at 580 California St, CA 94104.
             </p>
           </section>
         </div>
